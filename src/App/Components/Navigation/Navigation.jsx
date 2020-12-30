@@ -7,7 +7,7 @@ const Navigation = () => {
     return (
         <div className='navigation'>
             <div className='home-btn'>
-                dainel <span>kanyo</span>
+                daniel <span>kanyo</span>
             </div>
             <div className='items'>
                 {

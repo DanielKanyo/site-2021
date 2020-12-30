@@ -3,7 +3,9 @@ import { Canvas } from 'react-three-fiber';
 
 import Navigation from '../Navigation/Navigation';
 import Social from '../Social/Social';
-import Circle from './Elements/Circle';
+import Sphere from './Elements/Sphere';
+import PointLights from './Elements/PointLights';
+import Effects from './Effects/Effects';
 
 import './Header.css';
 
@@ -30,9 +32,10 @@ const Header = () => {
                 onMouseUp={() => set(false)}
                 onMouseDown={() => set(true)}
             >
-                <ambientLight />
-                <pointLight position={[10, 10, 10]} intensity={1.4} />
-                <Circle mouse={mouse} down={down} />
+                <ambientLight intensity={1.7}/>
+                <PointLights mouse={mouse} />
+                <Sphere mouse={mouse} down={down} />
+                <Effects down={down} />
             </Canvas>
         </div>
     )

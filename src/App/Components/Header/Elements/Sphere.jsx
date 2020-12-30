@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
 import { useFrame, useThree } from 'react-three-fiber';
 import lerp from 'lerp';
-import Effects from '../Effects/Effects';
 
-export default function Circle(props) {
+export default function Sphere(props) {
     const mesh = useRef();
     const { size, viewport } = useThree();
-    const { mouse, down } = props;
+    const { mouse } = props;
     const aspect = size.width / viewport.width;
 
     useFrame(() => {
@@ -18,9 +17,8 @@ export default function Circle(props) {
 
     return (
         <mesh ref={mesh}>
-            <circleGeometry args={[2, 128]} />
+            <sphereGeometry args={[2, 48, 48]} />
             <meshStandardMaterial color={'#4f4f4f'} />
-            <Effects down={down} />
         </mesh>
     )
 }

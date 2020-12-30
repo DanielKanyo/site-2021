@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: white;
-    background-image: radial-gradient(circle, #393939, #383838, #363636, #353535, #343434);
+    background-image: radial-gradient(circle, #323232, #2e2e2e, #292929, #252525, #212121);
     background-attachment: fixed;
 }
 
