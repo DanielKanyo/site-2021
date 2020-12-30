@@ -1,0 +1,43 @@
+.home-btn {
+    position: absolute;
+    left: 45px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    cursor: pointer;
+    user-select: none;
+}
+
+.home-btn span {
+    font-weight: 100;
+    transition: .1s;
+}
+
+.home-btn:hover span {
+    margin-top: 3px;
+    transition: .1s;
+}
+
+.items {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 20px;
+    z-index: 2;
+    user-select: none;
+}
+
+.items>div {
+    padding: 35px;
+    opacity: .4;
+    transition: .1s;
+}
+
+.items>div:hover {
+    opacity: .9;
+    cursor: pointer;
+    padding-top: 38px;
+    transition: .1s;
+}

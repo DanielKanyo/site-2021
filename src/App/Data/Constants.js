@@ -1,0 +1,1 @@
+export const NAVIGATION_ITEMS = ['about me', 'projects', 'skills', 'hobbies', 'contact'];

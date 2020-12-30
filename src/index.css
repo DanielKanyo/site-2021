@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-image: radial-gradient(circle, #393939, #383838, #363636, #353535, #343434);
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: Belligiant;
+    src: url('./App/Fonts/Belligiant.otf') format('opentype');
+}

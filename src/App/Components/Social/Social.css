@@ -1,0 +1,38 @@
+.social {
+    position: absolute;
+    height: 100vh;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.social>div {
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social>div>img {
+    width: 44px;
+    height: auto;
+}
+
+.social .social-icon {
+    width: 34px;
+    height: 34px;
+    color: white;
+    opacity: .3;
+    pointer-events: all;
+}
+
+.social .social-icon:hover {
+    opacity: .8;
+    cursor: pointer;
+}
