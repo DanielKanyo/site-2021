@@ -1,6 +1,6 @@
 .home-btn {
     position: absolute;
-    left: 45px;
+    left: 65px;
     height: 90px;
     display: flex;
     justify-content: center;
@@ -13,6 +13,7 @@
 .home-btn span {
     font-weight: 100;
     transition: .1s;
+    color: #15d4ed;
 }
 
 .home-btn:hover span {
@@ -24,9 +25,13 @@
     position: absolute;
     display: flex;
     top: 0;
-    right: 20px;
+    right: 65px;
     z-index: 2;
     user-select: none;
+}
+
+.items>div:last-of-type {
+    padding-right: 0;
 }
 
 .items>div {

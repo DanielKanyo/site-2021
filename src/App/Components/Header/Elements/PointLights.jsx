@@ -18,7 +18,7 @@ export default function Circle() {
         <mesh ref={mesh}>
             <pointLight position={[2, 2, 10]} intensity={.4} />
             <pointLight position={[-10, -10, 1]} intensity={1.6} color={'#15d4ed'} />
-            <pointLight position={[10, 10, 1]} intensity={1.6} color={'#ff00c3'} />
+            <pointLight position={[10, 10, 1]} intensity={1.6} color={'#23cfa4'} />
         </mesh>
     )
 }

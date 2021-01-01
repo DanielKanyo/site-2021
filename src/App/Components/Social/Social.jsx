@@ -3,6 +3,7 @@ import React from 'react';
 import { GitHub } from '@material-ui/icons';
 import { Twitter } from '@material-ui/icons';
 import { Facebook } from '@material-ui/icons';
+import { Instagram } from '@material-ui/icons';
 
 import './Social.css';
 
@@ -12,6 +13,7 @@ const Social = () => {
             <div><GitHub className='social-icon' /></div>
             <div><Twitter className='social-icon' /></div>
             <div><Facebook className='social-icon' /></div>
+            <div><Instagram className='social-icon' /></div>
         </div>
     )
 }

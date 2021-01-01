@@ -1,7 +1,7 @@
 .social {
     position: absolute;
     height: 100vh;
-    width: 120px;
+    width: 155px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,20 +13,15 @@
 .social>div {
     width: 100%;
     text-align: center;
-    height: 80px;
+    height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.social>div>img {
-    width: 44px;
-    height: auto;
-}
-
 .social .social-icon {
-    width: 34px;
-    height: 34px;
+    width: 26px;
+    height: 26px;
     color: white;
     opacity: .3;
     pointer-events: all;

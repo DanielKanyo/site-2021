@@ -26,13 +26,16 @@ const Header = () => {
                 <div className='last-name'>kanyo</div>
             </div>
             <Social />
+            <div className='small-bio'>
+                <div>Fullstack Web Developer <br/> <span>from Hungary</span></div>
+            </div>
             <Canvas
                 camera={{ position: [0, 0, 5] }}
                 onMouseMove={onMouseMove}
                 onMouseUp={() => set(false)}
                 onMouseDown={() => set(true)}
             >
-                <ambientLight intensity={1.7}/>
+                <ambientLight intensity={1.7} />
                 <PointLights mouse={mouse} />
                 <Sphere mouse={mouse} down={down} />
                 <Effects down={down} />

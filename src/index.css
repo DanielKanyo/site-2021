@@ -4,8 +4,8 @@ body {
     padding: 0;
     font-family: 'Quicksand', sans-serif;
     color: white;
-    background-image: radial-gradient(circle, #323232, #2e2e2e, #292929, #252525, #212121);
     background-attachment: fixed;
+    background-color: #2e2e2e;
 }
 
 @font-face {

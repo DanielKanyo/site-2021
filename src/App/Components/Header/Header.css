@@ -37,3 +37,25 @@
     text-transform: uppercase;
     height: 70px;
 }
+
+.small-bio {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-bio div {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    padding-top: 22px;
+}
+
+.small-bio span {
+    text-transform: uppercase;
+    opacity: .5;
+    font-weight: 100;
+    color: #23cfa4;
+}
