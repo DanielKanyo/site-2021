@@ -1,5 +1,6 @@
 import React, { useRef, useState, useCallback } from 'react';
 import { Canvas } from 'react-three-fiber';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 import Navigation from '../Navigation/Navigation';
 import Social from '../Social/Social';
@@ -27,7 +28,9 @@ const Header = () => {
             </div>
             <Social />
             <div className='small-bio'>
-                <div>Fullstack Web Developer <br/> <span>from Hungary</span></div>
+                <div>Fullstack Web Developer <br />
+                    <span>from Hungary</span>
+                </div>
             </div>
             <Canvas
                 camera={{ position: [0, 0, 5] }}
@@ -40,6 +43,11 @@ const Header = () => {
                 <Sphere mouse={mouse} down={down} />
                 <Effects down={down} />
             </Canvas>
+            <div className='scroll-indicator'>
+                <div>
+                    <ArrowDownwardIcon className='arrow-icon' />
+                </div>
+            </div>
         </div>
     )
 }

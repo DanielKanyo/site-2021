@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NAVIGATION_ITEMS } from '../../Data/Constants';
 
 import './Navigation.css';
@@ -7,7 +8,9 @@ const Navigation = () => {
     return (
         <div className='navigation'>
             <div className='home-btn'>
-                daniel <span>kanyo</span>
+                daniel<div>kanyo</div>
+            </div>
+            <div className='line-container'>
             </div>
             <div className='items'>
                 {
