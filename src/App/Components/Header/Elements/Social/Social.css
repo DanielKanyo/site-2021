@@ -17,17 +17,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: .7;
+}
+
+.social.light .social-icon {
+    color: #3f3f3f;
+}
+
+.social.light .social-icon:hover {
+    color: #000000;
+}
+
+.social.dark .social-icon {
+    color: #b3b3b3;
+}
+
+.social.dark .social-icon:hover {
+    color: white;
 }
 
 .social .social-icon {
     width: 26px;
     height: 26px;
-    color: white;
-    opacity: .3;
     pointer-events: all;
 }
 
 .social .social-icon:hover {
-    opacity: .8;
     cursor: pointer;
 }

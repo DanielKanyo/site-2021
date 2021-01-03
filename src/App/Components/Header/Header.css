@@ -1,7 +1,16 @@
-.header {
+.header.dark {
     width: 100%;
     height: 100vh;
     position: relative;
+    color: #a7a7a7;
+}
+
+.header.dark {
+    background-color: #2e2e2e;
+}
+
+.header.light {
+    background-color:#dbdbdb;
 }
 
 .header .name {
@@ -14,7 +23,6 @@
     z-index: 3;
     pointer-events: none;
     flex-direction: column;
-    user-select: none;
 }
 
 .name>div {
@@ -22,21 +30,39 @@
     align-items: center;
 }
 
-.name .first-name {
+.header .name .first-name {
     font-size: 178px;
-    opacity: .8;
     font-family: Belligiant;
     height: 150px;
     margin-top: 30px;
+    opacity: .8;
 }
 
-.name .last-name {
+.header.dark .name .first-name {
+    color: white;
+}
+
+.header.light .name .first-name {
+    color: #474747;
+}
+
+.header .name .last-name {
     font-size: 28px;
-    font-weight: 100;
     letter-spacing: 90px;
-    opacity: .5;
     text-transform: uppercase;
     height: 70px;
+    margin-left: -40px;
+    font-weight: 100;
+}
+
+.header.dark .name .last-name {
+    color: white;
+    opacity: .4;
+}
+
+.header.light .name .last-name {
+    color: #2e2e2e;
+    opacity: .7;
 }
 
 .small-bio {
@@ -56,30 +82,24 @@
 
 .small-bio span {
     text-transform: uppercase;
-    opacity: .5;
     font-weight: 100;
     color: #23cfa4;
 }
 
-.scroll-indicator {
+.header.light .small-bio {
+    color: #474747;
+}
+
+.header.light .small-bio span {
+    color: #02c997;
+    font-weight: 400;
+}
+
+.scroll-indicator-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
-    pointer-events: none;
-}
-
-.scroll-indicator>div {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #3b3b3b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scroll-indicator .arrow-icon {
     opacity: .4;
 }

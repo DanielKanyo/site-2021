@@ -5,14 +5,32 @@
     z-index: 5;
     width: calc(100% - 160px);
     justify-content: space-between;
-    user-select: none;
     margin: 0 80px;
+    pointer-events: none;
 }
 
 .home-btn {
-    padding: 35px 0;
+    padding: 35px 35px 0 0;
     cursor: pointer;
     display: flex;
+    pointer-events: auto;
+}
+
+.navigation.light .home-btn {
+    color: #3f3f3f;
+}
+
+.navigation.light .home-btn div {
+    color: #00b6ce;
+    font-weight: 400;
+}
+
+.navigation.dark .home-btn {
+    color: white;
+}
+
+.navigation.dark .home-btn div {
+    color: #15d4ed;
 }
 
 .home-btn div {
@@ -31,19 +49,34 @@
     display: flex;
 }
 
+.navigation.dark .items>div {
+    color: #a7a7a7;
+}
+
+.navigation.dark .items>div:hover {
+    color: white;
+}
+
+.navigation.light .items>div {
+    color: #3f3f3f;
+}
+
+.navigation.light .items>div:hover {
+    color: black;
+}
+
 .items>div:last-of-type {
     padding-right: 0;
 }
 
 .items>div {
     padding: 35px;
-    opacity: .4;
     transition: .1s;
     white-space: nowrap;
+    pointer-events: auto;
 }
 
 .items>div:hover {
-    opacity: .9;
     cursor: pointer;
     padding-top: 38px;
     transition: .1s;

@@ -2,16 +2,18 @@ import React, { useRef, useState, useCallback } from 'react';
 import { Canvas } from 'react-three-fiber';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
-import Navigation from '../Navigation/Navigation';
-import Social from '../Social/Social';
+import { THEMES } from '../../Data/Constants';
+import Navigation from './Elements/Navigation/Navigation';
+import Social from './Elements/Social/Social';
 import Sphere from './Elements/Sphere';
 import PointLights from './Elements/PointLights';
+import Theme from './Elements/Theme/Theme';
 import Effects from './Effects/Effects';
 
 import './Header.css';
 
-const Header = () => {
-    const [down, set] = useState(false);
+const Header = ({ theme, setTheme }) => {
+    const [down, setMouseDown] = useState(false);
 
     const mouse = useRef([0, 0]);
 
@@ -20,13 +22,13 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='header'>
-            <Navigation />
+        <div className={`header ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
+            <Navigation theme={theme} />
             <div className='name'>
                 <div className='first-name'>daniel</div>
                 <div className='last-name'>kanyo</div>
             </div>
-            <Social />
+            <Social theme={theme} />
             <div className='small-bio'>
                 <div>Fullstack Web Developer <br />
                     <span>from Hungary</span>
@@ -35,19 +37,18 @@ const Header = () => {
             <Canvas
                 camera={{ position: [0, 0, 5] }}
                 onMouseMove={onMouseMove}
-                onMouseUp={() => set(false)}
-                onMouseDown={() => set(true)}
+                onMouseUp={() => setMouseDown(false)}
+                onMouseDown={() => setMouseDown(true)}
             >
-                <ambientLight intensity={1.7} />
-                <PointLights mouse={mouse} />
+                <ambientLight intensity={theme === THEMES.LIGHT ? 5.7 : 1.7} />
+                <PointLights theme={theme} />
                 <Sphere mouse={mouse} down={down} />
                 <Effects down={down} />
             </Canvas>
-            <div className='scroll-indicator'>
-                <div>
-                    <ArrowDownwardIcon className='arrow-icon' />
-                </div>
+            <div className='scroll-indicator-container'>
+                <ArrowDownwardIcon className='scroll-indicator-icon' />
             </div>
+            <Theme theme={theme} setTheme={setTheme} />
         </div>
     )
 }

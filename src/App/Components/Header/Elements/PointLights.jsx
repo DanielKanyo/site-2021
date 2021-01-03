@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
 
-export default function Circle() {
+import { THEMES } from '../../../Data/Constants';
+
+export default function PointLights({ theme }) {
     const mesh = useRef();
 
     useFrame(() => {
@@ -14,11 +16,13 @@ export default function Circle() {
         }
     });
 
+    const intensity = theme === THEMES.LIGHT ? 7.7 : 1.4;
+
     return (
         <mesh ref={mesh}>
             <pointLight position={[2, 2, 10]} intensity={.4} />
-            <pointLight position={[-10, -10, 1]} intensity={1.6} color={'#15d4ed'} />
-            <pointLight position={[10, 10, 1]} intensity={1.6} color={'#23cfa4'} />
+            <pointLight position={[-10, -10, 1]} intensity={intensity} color={'#15d4ed'} />
+            <pointLight position={[10, 10, 1]} intensity={intensity} color={'#23cfa4'} />
         </mesh>
     )
 }

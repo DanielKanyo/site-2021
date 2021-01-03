@@ -7,11 +7,11 @@ import { Twitter } from '@material-ui/icons';
 import { Facebook } from '@material-ui/icons';
 import { Instagram } from '@material-ui/icons';
 
-import { SOCIAL_LINKS, SOCIALS } from '../../Data/Constants';
+import { SOCIAL_LINKS, SOCIALS, THEMES } from '../../../../Data/Constants';
 
 import './Social.css';
 
-const Social = () => {
+const Social = ({ theme }) => {
 
     const getIcon = (id) => {
         switch (id) {
@@ -30,7 +30,7 @@ const Social = () => {
     }
 
     return (
-        <div className='social'>
+        <div className={`social ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
             {
                 SOCIAL_LINKS.map((item, i) => (
                     <div key={i}>

@@ -20,7 +20,7 @@ export default function Effects({ down }) {
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray='passes' scene={scene} camera={camera} />
             <waterPass attachArray='passes' factor={1.5} />
-            <glitchPass attachArray='passes' factor={down ? 1 : 0} />
+            <glitchPass attachArray='passes' factor={!!down} />
         </effectComposer>
     )
 }

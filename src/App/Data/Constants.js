@@ -7,6 +7,11 @@ export const SOCIALS = {
     INSTAGRAM: 'instagram'
 }
 
+export const THEMES = {
+    DARK: 'dark',
+    LIGHT: 'light'
+}
+
 export const SOCIAL_LINKS = [
     {
         id: SOCIALS.GITHUB,

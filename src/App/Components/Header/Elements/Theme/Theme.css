@@ -1,0 +1,39 @@
+.themes {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    height: 30px;
+}
+
+.themes>div {
+    display: flex;
+    cursor: pointer;
+    transition: .1s;
+    align-items: center;
+}
+
+.themes>div:hover {
+    padding-bottom: 3px;
+}
+
+.themes.dark>div {
+    color: #666666;
+}
+
+.themes.light>div {
+    color: #979797;
+}
+
+.themes.dark>div.active {
+    color: white;
+}
+.themes.light>div.active {
+    color: #3f3f3f;
+}
+
+.dark-theme {
+    padding-left: 10px;
+}
