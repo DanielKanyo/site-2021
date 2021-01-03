@@ -1,6 +1,8 @@
 import React, { useRef, useState, useCallback } from 'react';
 import { Canvas } from 'react-three-fiber';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import { THEMES } from '../../Data/Constants';
 import Navigation from './Elements/Navigation/Navigation';
@@ -49,6 +51,14 @@ const Header = ({ theme, setTheme }) => {
                 <ArrowDownwardIcon className='scroll-indicator-icon' />
             </div>
             <Theme theme={theme} setTheme={setTheme} />
+            <div className='navigator'>
+                <div className='arrow arrow-back'>
+                    <ArrowBackIcon />
+                </div>
+                <div className='arrow arrow-back'>
+                    <ArrowForwardIcon />
+                </div>
+            </div>
         </div>
     )
 }

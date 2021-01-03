@@ -35,49 +35,49 @@
 
 .home-btn div {
     font-weight: 100;
-    transition: .1s;
+    transition: 0.1s;
     color: #15d4ed;
     text-transform: uppercase;
 }
 
 .home-btn:hover div {
     margin-top: 3px;
-    transition: .1s;
+    transition: 0.1s;
 }
 
 .items {
     display: flex;
 }
 
-.navigation.dark .items>div {
+.navigation.dark .items > div {
     color: #a7a7a7;
 }
 
-.navigation.dark .items>div:hover {
+.navigation.dark .items > div:hover {
     color: white;
 }
 
-.navigation.light .items>div {
+.navigation.light .items > div {
     color: #3f3f3f;
 }
 
-.navigation.light .items>div:hover {
+.navigation.light .items > div:hover {
     color: black;
 }
 
-.items>div:last-of-type {
+.items > div:last-of-type {
     padding-right: 0;
 }
 
-.items>div {
+.items > div {
     padding: 35px;
-    transition: .1s;
+    transition: 0.1s;
     white-space: nowrap;
     pointer-events: auto;
 }
 
-.items>div:hover {
+.items > div:hover {
     cursor: pointer;
     padding-top: 38px;
-    transition: .1s;
+    transition: 0.1s;
 }

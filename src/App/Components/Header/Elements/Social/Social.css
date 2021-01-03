@@ -10,14 +10,14 @@
     left: 80px;
 }
 
-.social>div {
+.social > div {
     width: 100%;
     text-align: center;
     height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .social.light .social-icon {
