@@ -94,15 +94,6 @@
     font-weight: 400;
 }
 
-.scroll-indicator-container {
-    position: absolute;
-    bottom: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    opacity: 0.4;
-}
-
 .navigator {
     position: absolute;
     left: 0;

@@ -33,17 +33,15 @@ const Social = ({ theme }) => {
         <div className={`social ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
             {
                 SOCIAL_LINKS.map((item, i) => (
-                    <div key={i}>
-                        <Tooltip title={item.id.toUpperCase()} arrow placement='right'>
-                            <Link href={item.url} target='_blank'>
-                                {getIcon(item.id)}
-                            </Link>
-                        </Tooltip>
-                    </div>
+                    <Tooltip title={item.id.toUpperCase()} arrow placement='top' key={i}>
+                        <Link href={item.url} target='_blank'>
+                            {getIcon(item.id)}
+                        </Link>
+                    </Tooltip>
                 ))
             }
         </div>
     )
 }
 
-export default Social
+export default Social;

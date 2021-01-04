@@ -1,23 +1,19 @@
 .social {
     position: absolute;
-    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 5;
     pointer-events: none;
-    left: 80px;
+    bottom: 35px;
 }
 
-.social > div {
-    width: 100%;
-    text-align: center;
-    height: 65px;
+.social > a {
     display: flex;
     justify-content: center;
-    align-items: center;
     opacity: 0.7;
+    margin: 0 25px;
 }
 
 .social.light .social-icon {
@@ -37,8 +33,6 @@
 }
 
 .social .social-icon {
-    width: 26px;
-    height: 26px;
     pointer-events: all;
 }
 
