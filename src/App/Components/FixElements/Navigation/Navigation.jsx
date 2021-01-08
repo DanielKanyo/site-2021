@@ -1,12 +1,14 @@
 import React from 'react';
 
-import { NAVIGATION_ITEMS, THEMES } from '../../../../Data/Constants';
+import { getClassName } from '../../../Shared/helperFunctions';
+
+import { NAVIGATION_ITEMS } from '../../../Data/Constants';
 
 import './Navigation.css';
 
 const Navigation = ({ theme }) => {
     return (
-        <div className={`navigation ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
+        <div className={getClassName('navigation', theme)}>
             <div className='home-btn'>
                 daniel<div>kanyo</div>
             </div>

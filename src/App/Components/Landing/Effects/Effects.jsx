@@ -9,7 +9,7 @@ import { WaterPass } from './post/Waterpass';
 
 extend({ EffectComposer, ShaderPass, RenderPass, WaterPass, FilmPass, GlitchPass })
 
-export default function Effects({ down }) {
+export default function Effects() {
     const composer = useRef();
     const { scene, gl, size, camera } = useThree();
 
@@ -20,7 +20,6 @@ export default function Effects({ down }) {
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray='passes' scene={scene} camera={camera} />
             <waterPass attachArray='passes' factor={1.5} />
-            <glitchPass attachArray='passes' factor={!!down} />
         </effectComposer>
     )
 }

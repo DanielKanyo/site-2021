@@ -1,0 +1,23 @@
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about .content {
+    width: calc(100% - 600px);
+    padding: 150px 300px;
+}
+
+.about .text {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.about.dark {
+    color: #a7a7a7;
+}
+
+.about.light {
+    color: #474747;
+}

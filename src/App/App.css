@@ -1,0 +1,47 @@
+.app {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.app.dark {
+    background-image: radial-gradient(
+        circle,
+        #464646,
+        #3f3f3f,
+        #393939,
+        #323232,
+        #2c2c2c
+    );
+}
+
+.app.light {
+    background-image: radial-gradient(
+        circle,
+        #e9e9e9,
+        #e0e0e0,
+        #d7d7d7,
+        #cfcfcf,
+        #c6c6c6
+    );
+}
+
+.rect {
+    position: absolute;
+    height: 200%;
+    top: -50%;
+    width: 620px;
+    left: calc(50% - 310px);
+    transform-origin: center;
+    transform: rotate(25deg);
+    opacity: 0.3;
+}
+
+.app.dark .rect {
+    background-color: #292929;
+}
+
+.app.light .rect {
+    background-color: #9b9b9b;
+}

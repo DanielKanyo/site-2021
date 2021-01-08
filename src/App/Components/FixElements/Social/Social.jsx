@@ -7,7 +7,9 @@ import { Twitter } from '@material-ui/icons';
 import { Facebook } from '@material-ui/icons';
 import { Instagram } from '@material-ui/icons';
 
-import { SOCIAL_LINKS, SOCIALS, THEMES } from '../../../../Data/Constants';
+import { getClassName } from '../../../Shared/helperFunctions';
+
+import { SOCIAL_LINKS, SOCIALS } from '../../../Data/Constants';
 
 import './Social.css';
 
@@ -30,10 +32,10 @@ const Social = ({ theme }) => {
     }
 
     return (
-        <div className={`social ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
+        <div className={getClassName('social', theme)}>
             {
                 SOCIAL_LINKS.map((item, i) => (
-                    <Tooltip title={item.id.toUpperCase()} arrow placement='top' key={i}>
+                    <Tooltip title={item.id.toUpperCase()} arrow placement='right' key={i}>
                         <Link href={item.url} target='_blank'>
                             {getIcon(item.id)}
                         </Link>

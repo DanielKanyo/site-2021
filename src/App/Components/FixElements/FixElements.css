@@ -1,0 +1,43 @@
+.fix-elements {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    pointer-events: none;
+}
+
+.small-bio {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.small-bio div {
+    transform-origin: center;
+    transform: rotate(90deg);
+    padding-top: 8px;
+}
+
+.small-bio span {
+    text-transform: uppercase;
+    font-weight: 100;
+    color: #23cfa4;
+}
+
+.fix-elements.dark .small-bio {
+    color: #a7a7a7;
+}
+
+.fix-elements.light .small-bio {
+    color: #474747;
+}
+
+.fix-elements.light .small-bio span {
+    color: #02c997;
+    font-weight: 400;
+}
