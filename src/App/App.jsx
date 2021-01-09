@@ -11,17 +11,26 @@ import './App.css';
 
 const App = () => {
     const [theme, setTheme] = useState(THEMES.DARK);
+    const [index, setIndex] = useState(0);
+
+    const indexChanged = i => {
+        setIndex(i);
+    };
 
     return (
         <div className={getClassName('app', theme)}>
             <div className='rect'></div>
+            <FixElements
+                theme={theme}
+                setTheme={setTheme}
+                index={index}
+                setIndex={setIndex}
+            />
 
-            <SwipeableViews enableMouseEvents>
+            <SwipeableViews enableMouseEvents index={index} onChangeIndex={indexChanged}>
                 <Landing theme={theme} />
                 <About theme={theme} />
             </SwipeableViews>
-
-            <FixElements theme={theme} setTheme={setTheme} />
         </div>
     );
 }

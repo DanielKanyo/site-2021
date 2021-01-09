@@ -41,3 +41,51 @@
     color: #02c997;
     font-weight: 400;
 }
+
+.simple-navigator {
+    position: absolute;
+    bottom: 35px;
+    left: 80px;
+    display: flex;
+    z-index: 5;
+    pointer-events: none;
+    color: #a7a7a7;
+    opacity: 0.4;
+}
+
+.navigation-indicators {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    pointer-events: none;
+    height: 24px;
+}
+
+.navigation-indicators .indicator-container {
+    height: 100%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.navigation-indicators .indicator-container > div {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid #a7a7a7;
+    opacity: 0.7;
+}
+
+.navigation-indicators .indicator-container:hover {
+    cursor: pointer;
+}
+
+.navigation-indicators .indicator-container > div.active {
+    background-color: #a7a7a7;
+    opacity: 1;
+}

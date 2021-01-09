@@ -13,8 +13,8 @@
 .social > a {
     display: flex;
     justify-content: center;
-    opacity: 0.7;
-    margin: 20px 0;
+    opacity: 0.5;
+    margin: 15px 0;
 }
 
 .social.light .social-icon {
@@ -35,8 +35,4 @@
 
 .social .social-icon {
     pointer-events: all;
-}
-
-.social .social-icon:hover {
-    cursor: pointer;
 }

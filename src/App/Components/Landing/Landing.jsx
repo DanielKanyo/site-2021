@@ -6,6 +6,8 @@ import Sphere from './Elements/Sphere';
 import PointLights from './Elements/PointLights';
 import Effects from './Effects/Effects';
 
+import { getClassName } from '../../Shared/helperFunctions';
+
 import './Landing.css';
 
 const Landing = ({ theme }) => {
@@ -16,17 +18,14 @@ const Landing = ({ theme }) => {
     }, []);
 
     return (
-        <div className={`landing ${theme === THEMES.LIGHT ? THEMES.LIGHT : THEMES.DARK}`}>
+        <div className={getClassName('landing', theme)}>
             <div className='name'>
                 <div className='first-name'>daniel</div>
                 <div className='last-name'>kanyo</div>
             </div>
-            <Canvas
-                camera={{ position: [0, 0, 5] }}
-                onMouseMove={onMouseMove}
-            >
+            <Canvas camera={{ position: [0, 0, 5] }} onMouseMove={onMouseMove}>
                 <ambientLight intensity={theme === THEMES.LIGHT ? 5.7 : 1.7} />
-                <PointLights theme={theme} />
+                <PointLights theme={theme} mouse={mouse} />
                 <Sphere mouse={mouse} />
                 <Effects />
             </Canvas>
