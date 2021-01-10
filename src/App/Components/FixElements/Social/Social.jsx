@@ -7,13 +7,11 @@ import { Twitter } from '@material-ui/icons';
 import { Facebook } from '@material-ui/icons';
 import { Instagram } from '@material-ui/icons';
 
-import { getClassName } from '../../../Shared/helperFunctions';
-
 import { SOCIAL_LINKS, SOCIALS } from '../../../Data/Constants';
 
 import './Social.css';
 
-const Social = ({ theme }) => {
+const Social = () => {
 
     const getIcon = (id) => {
         switch (id) {
@@ -32,7 +30,7 @@ const Social = ({ theme }) => {
     }
 
     return (
-        <div className={getClassName('social', theme)}>
+        <div className='social'>
             {
                 SOCIAL_LINKS.map((item, i) => (
                     <Tooltip title={item.id.toUpperCase()} arrow placement='right' key={i}>

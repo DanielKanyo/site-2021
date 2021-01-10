@@ -10,59 +10,40 @@
 }
 
 .home-btn {
-    padding: 35px 35px 0 0;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     display: flex;
     pointer-events: auto;
+    font-weight: 300;
+    color: #a7a7a7;
 }
 
-.navigation.light .home-btn {
-    color: #3f3f3f;
-}
-
-.navigation.light .home-btn div {
-    color: #00b6ce;
+.home-btn .text {
+    display: flex;
+    margin-left: 15px;
     font-weight: 400;
 }
 
-.navigation.dark .home-btn {
-    color: white;
+.home-btn .text > div {
+    color: #00c9a1;
 }
 
-.navigation.dark .home-btn div {
-    color: #15d4ed;
-}
-
-.home-btn div {
-    font-weight: 100;
-    transition: 0.1s;
-    color: #15d4ed;
+.home-btn .text > div {
+    font-weight: 400;
     text-transform: uppercase;
-}
-
-.home-btn:hover div {
-    margin-top: 3px;
-    transition: 0.1s;
 }
 
 .items {
     display: flex;
 }
 
-.navigation.dark .items > div {
+.items > div {
     color: #a7a7a7;
 }
 
-.navigation.dark .items > div:hover {
+.items > div:hover {
     color: white;
-}
-
-.navigation.light .items > div {
-    color: #3f3f3f;
-}
-
-.navigation.light .items > div:hover {
-    color: black;
 }
 
 .items > div:last-of-type {

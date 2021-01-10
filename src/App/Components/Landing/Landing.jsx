@@ -1,16 +1,14 @@
 import React, { useRef, useCallback } from 'react';
 import { Canvas } from 'react-three-fiber';
+import Button from '@material-ui/core/Button';
 
-import { THEMES } from '../../Data/Constants';
 import Sphere from './Elements/Sphere';
 import PointLights from './Elements/PointLights';
 import Effects from './Effects/Effects';
 
-import { getClassName } from '../../Shared/helperFunctions';
-
 import './Landing.css';
 
-const Landing = ({ theme }) => {
+const Landing = () => {
     const mouse = useRef([0, 0]);
 
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => {
@@ -18,17 +16,28 @@ const Landing = ({ theme }) => {
     }, []);
 
     return (
-        <div className={getClassName('landing', theme)}>
+        <div className='landing'>
             <div className='name'>
                 <div className='first-name'>daniel</div>
                 <div className='last-name'>kanyo</div>
             </div>
+
             <Canvas camera={{ position: [0, 0, 5] }} onMouseMove={onMouseMove}>
-                <ambientLight intensity={theme === THEMES.LIGHT ? 5.7 : 1.7} />
-                <PointLights theme={theme} mouse={mouse} />
+                <ambientLight intensity={1.7} />
+                <PointLights mouse={mouse} />
                 <Sphere mouse={mouse} />
                 <Effects />
             </Canvas>
+
+            <div className='welcome-msg'>
+                <div className='welcome-title'>Welcome Visitor!</div>
+                <div className='welcome-text'>
+                    I hope you enjoy your time here. If you have any questions please click the button below.
+                </div>
+                <div className='welcome-btn'>
+                    <Button variant='outlined'>Contact me</Button>
+                </div>
+            </div>
         </div>
     )
 }

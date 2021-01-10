@@ -17,19 +17,11 @@
     margin: 15px 0;
 }
 
-.social.light .social-icon {
-    color: #3f3f3f;
-}
-
-.social.light .social-icon:hover {
-    color: #000000;
-}
-
-.social.dark .social-icon {
+.social-icon {
     color: #b3b3b3;
 }
 
-.social.dark .social-icon:hover {
+.social-icon:hover {
     color: white;
 }
 

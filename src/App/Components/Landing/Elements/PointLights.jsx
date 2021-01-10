@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 import { useFrame, useThree } from 'react-three-fiber';
 
-import { THEMES } from '../../../Data/Constants';
-
-export default function PointLights({ theme, mouse }) {
+export default function PointLights({ mouse }) {
     const mesh = useRef();
     const { size, viewport } = useThree();
     const aspect = size.width / viewport.width;
@@ -15,13 +13,11 @@ export default function PointLights({ theme, mouse }) {
         }
     });
 
-    const intensity = theme === THEMES.LIGHT ? 7.7 : 2.4;
-
     return (
         <mesh ref={mesh}>
-            <pointLight position={[2, 2, 10]} intensity={.4} />
-            <pointLight position={[0, 0, 3]} intensity={intensity} color={'#00ffcc'} />
-            <pointLight position={[0, 0, -3]} intensity={intensity} color={'#525252'} />
+            <pointLight position={[2, 2, 10]} intensity={0.4} />
+            <pointLight position={[0, 0, 3]} intensity={2.4} color={'#00ffcc'} />
+            <pointLight position={[0, 0, -3]} intensity={2.4} color={'#525252'} />
         </mesh>
     )
 }

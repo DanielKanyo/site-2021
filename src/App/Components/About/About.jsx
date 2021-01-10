@@ -1,19 +1,37 @@
 import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { getClassName } from '../../Shared/helperFunctions';
+import { ABOUT_ME } from '../../Data/Constants';
+import me from '../../Images/me.jpg';
 
 import './About.css';
 
-const About = ({ theme }) => {
+const useStyles = makeStyles((theme) => ({
+    large: {
+        width: theme.spacing(14),
+        height: theme.spacing(14),
+        marginRight: 20
+    },
+}));
+
+
+const About = () => {
+    const classes = useStyles();
+
     return (
-        <div className={getClassName('about', theme)}>
+        <div className='about'>
             <div className='content'>
-                <div className='text'>
-                    With experience in web development and design, I maintain a healthy balance between functionality and visual impact in all my work.
-                    I believe every piece of design can be a work of art.
+                <div className='title'>
+                    <Avatar alt='Daniel Kanyo' src={me} className={classes.large} />
+                    <div>
+                        about<span>me</span>
+                    </div>
+                </div>
+                <div className='qoute-text'>
+                    {ABOUT_ME}
                 </div>
             </div>
-
         </div>
     )
 }

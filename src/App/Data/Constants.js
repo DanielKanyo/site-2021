@@ -1,15 +1,10 @@
-export const NAVIGATION_ITEMS = ['about me', 'projects', 'skills', 'hobbies', 'contact'];
+export const NAVIGATION_ITEMS = ['home', 'about me', 'skills', 'projects', 'hobbies', 'contact'];
 
 export const SOCIALS = {
     GITHUB: 'github',
     TWITTER: 'twitter',
     FACEBOOK: 'facebook',
     INSTAGRAM: 'instagram'
-}
-
-export const THEMES = {
-    DARK: 'dark',
-    LIGHT: 'light'
 }
 
 export const SOCIAL_LINKS = [
@@ -29,4 +24,6 @@ export const SOCIAL_LINKS = [
         id: SOCIALS.INSTAGRAM,
         url: 'https://www.instagram.com/daniel_kanyo/?hl=hu'
     },
-]
+];
+
+export const ABOUT_ME = 'With experience in web development and design, I maintain a healthy balance between functionality and visual impact in all my work. I believe every piece of design can be a work of art.';

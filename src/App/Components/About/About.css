@@ -2,22 +2,29 @@
     height: 100vh;
     display: flex;
     align-items: center;
-}
-
-.about .content {
-    width: calc(100% - 600px);
-    padding: 150px 300px;
-}
-
-.about .text {
-    font-size: 40px;
-    font-weight: 100;
-}
-
-.about.dark {
     color: #a7a7a7;
 }
 
-.about.light {
-    color: #474747;
+.title {
+    display: flex;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title span {
+    font-weight: 100;
+}
+
+.about .content {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.about .qoute-text {
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 30px;
+    font-style: italic;
 }
