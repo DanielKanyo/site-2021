@@ -15,19 +15,9 @@
 
 .rect {
     position: absolute;
-    height: 200%;
-    top: -50%;
-    width: 620px;
-    left: calc(50% - 310px);
-    transform-origin: center;
-    transform: rotate(25deg);
-    background-image: radial-gradient(
-        circle,
-        #00a080,
-        #008c70,
-        #007860,
-        #006550,
-        #005241
-    );
-    opacity: 0.2;
+    height: 100vh;
+    width: 50vw;
+    left: 0;
+    background-color: black;
+    opacity: 0.15;
 }

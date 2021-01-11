@@ -19,11 +19,11 @@ const Navigation = ({ index, setIndex }) => {
             <div className='items'>
                 {
                     NAVIGATION_ITEMS.map((item, i) => {
-                        return i !== 0 ? (
+                        return (
                             <div key={i} onClick={() => { setIndex(i) }} className={i === index ? 'active' : null}>
                                 {item}
                             </div>
-                        ) : null;
+                        );
                     })
                 }
             </div>
