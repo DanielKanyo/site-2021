@@ -8,7 +8,7 @@ import Effects from './Effects/Effects';
 
 import './Landing.css';
 
-const Landing = () => {
+const Landing = ({ setIndex }) => {
     const mouse = useRef([0, 0]);
 
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => {
@@ -32,10 +32,10 @@ const Landing = () => {
             <div className='welcome-msg'>
                 <div className='welcome-title'>Welcome Visitor!</div>
                 <div className='welcome-text'>
-                    I hope you enjoy your time here. If you have any questions please click the button below.
+                    I hope you enjoy your time here. If you have any questions please click on the button below.
                 </div>
                 <div className='welcome-btn'>
-                    <Button variant='outlined'>Contact me</Button>
+                    <Button variant='outlined' onClick={() => setIndex(5)}>Contact me</Button>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ const FixElements = ({ index, setIndex }) => {
 
     return (
         <div className='fix-elements'>
-            <Navigation setIndex={setIndex} />
+            <Navigation index={index} setIndex={setIndex} />
             <Social />
 
             <div className='small-bio'>

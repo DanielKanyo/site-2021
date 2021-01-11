@@ -21,9 +21,12 @@ const App = () => {
             <FixElements index={index} setIndex={setIndex} />
 
             <SwipeableViews enableMouseEvents index={index} onChangeIndex={indexChanged}>
-                <Landing />
+                <Landing setIndex={setIndex} />
                 <About />
                 <Skills />
+                <div></div>
+                <div></div>
+                <div></div>
             </SwipeableViews>
         </div>
     );

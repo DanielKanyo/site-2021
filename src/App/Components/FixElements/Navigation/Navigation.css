@@ -44,6 +44,7 @@
 
 .items > div:hover {
     color: white;
+    opacity: .8;
 }
 
 .items > div:last-of-type {
@@ -51,7 +52,8 @@
 }
 
 .items > div {
-    padding: 35px;
+    padding: 35px 0;
+    margin: 0 35px;
     transition: 0.1s;
     white-space: nowrap;
     pointer-events: auto;
@@ -61,4 +63,10 @@
     cursor: pointer;
     padding-top: 38px;
     transition: 0.1s;
+}
+
+.items > div.active {
+    border-bottom: 1px solid white;
+    color: white;
+    opacity: .8;
 }
