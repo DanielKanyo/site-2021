@@ -16,7 +16,7 @@
     display: flex;
     pointer-events: auto;
     font-weight: 300;
-    color: #a7a7a7;
+    color: #d1d1d1;
 }
 
 .home-btn .text {
@@ -39,12 +39,12 @@
 }
 
 .items > div {
-    color: #a7a7a7;
+    color: #d1d1d1;
 }
 
 .items > div:hover {
     color: white;
-    opacity: .8;
+    opacity: 1;
 }
 
 .items > div:last-of-type {
@@ -68,5 +68,5 @@
 .items > div.active {
     border-bottom: 1px solid white;
     color: white;
-    opacity: .8;
+    opacity: 1;
 }
