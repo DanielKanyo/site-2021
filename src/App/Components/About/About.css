@@ -8,9 +8,10 @@
 .title {
     display: flex;
     font-size: 60px;
-    display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 12px;
+    margin-bottom: 45px;
 }
 
 .title span {

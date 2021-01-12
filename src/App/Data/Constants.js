@@ -5,7 +5,7 @@ export const SOCIALS = {
     TWITTER: 'twitter',
     FACEBOOK: 'facebook',
     INSTAGRAM: 'instagram'
-}
+};
 
 export const SOCIAL_LINKS = [
     {
@@ -27,3 +27,11 @@ export const SOCIAL_LINKS = [
 ];
 
 export const ABOUT_ME = 'With experience in web development and design, I maintain a healthy balance between functionality and visual impact in all my work. I believe every piece of design can be a work of art.';
+
+export const SOFT_LIGHT_OPTIONS = {
+    frustrum: 30.75, // Frustrum width (default: 3.75)
+    size: 0.006, // World size (default: 0.005)
+    near: 9.5, // Near plane (default: 9.5)
+    samples: 30, // Samples (default: 17)
+    rings: 22, // Rings (default: 11)
+};
