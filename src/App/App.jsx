@@ -20,6 +20,7 @@ const App = () => {
 
     return (
         <div className='app'>
+            <div className='rect'></div>
             <FixElements index={index} setIndex={setIndex} />
 
             <BindKeyboardSwipeableViews

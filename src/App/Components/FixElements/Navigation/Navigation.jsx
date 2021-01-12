@@ -7,7 +7,6 @@ import me from '../../../Images/me.jpg';
 import './Navigation.css';
 
 const Navigation = ({ index, setIndex }) => {
-    console.log(index);
     return (
         <div className='navigation'>
             <div className='home-btn' onClick={() => { setIndex(0) }}>
