@@ -1,0 +1,64 @@
+.skills {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.content {
+    width: 700px;
+    min-height: 120px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-text {
+    font-family: "Quicksand", sans-serif;
+    margin-top: 5px;
+}
+
+.button-and-sw-container {
+    display: flex;
+}
+
+.button-and-sw-container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-and-sw-container .button:hover {
+    cursor: pointer;
+}
+
+.button-and-sw-container .button[disabled] {
+    opacity: 0.2;
+    cursor: auto;
+}
+
+.skill-items {
+    text-align: center;
+}
+
+.item-and-fav-icon-container svg {
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    opacity: 0.1;
+    height: 90px;
+    width: 90px;
+    transform: rotate(30deg);
+}
+
+.skill-item {
+    display: inline-flex;
+    padding: 30px;
+    margin: 4px 4px 0 0;
+    font-size: 17px;
+    color: white;
+    background-color: rgba(244, 244, 244, 0.2);
+}

@@ -26,4 +26,23 @@ export const SOCIAL_LINKS = [
     },
 ];
 
-export const ABOUT_ME = 'With experience in web development and design, I maintain a healthy balance between functionality and visual impact in all my work. I believe every piece of design can be a work of art.';
+export const SKILL_CATEGORIES = {
+    BACKEND: 'backend',
+    FRONTEND: 'frontend',
+    OTHER: 'other'
+};
+
+export const SKILLS = [
+    {
+        category: SKILL_CATEGORIES.BACKEND,
+        items: ['Java', 'Spring Boot', 'Node.js', 'Firebase', 'Php']
+    },
+    {
+        category: SKILL_CATEGORIES.FRONTEND,
+        items: ['HTML5', 'CSS3', 'Java Script', 'Angular', 'React.js', 'Polymer', 'd3.js', 'Three.js', 'Redux', 'JQuery', 'React Native', 'Bootstrap']
+    },
+    {
+        category: SKILL_CATEGORIES.OTHER,
+        items: ['Linux', 'Git', 'MongoDB', 'Docker', 'Jenkins', 'UX', 'Non-Smoking', 'Driving Licence']
+    }
+];

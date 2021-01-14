@@ -2,7 +2,6 @@ import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { ABOUT_ME } from '../../Data/Constants';
 import me from '../../Images/me.jpg';
 
 import './About.css';
@@ -29,7 +28,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className='qoute-text'>
-                    {ABOUT_ME}
+                    With experience in web development and design, I maintain a healthy balance between functionality and visual impact in all my work.
+                    I believe every piece of design can be a work of art.
                 </div>
             </div>
         </div>
