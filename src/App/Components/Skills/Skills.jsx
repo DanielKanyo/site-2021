@@ -47,8 +47,21 @@ const styles = {
 };
 
 const Skills = () => {
+    const initialSkillLevels = [];
+
+    SKILLS.forEach(skill => {
+        const temp = [];
+
+        skill.items.forEach(() => {
+            temp.push(0);
+        });
+
+        initialSkillLevels.push(temp);
+    });
+
     const classes = useStyles();
     const [index, setIndex] = useState(1);
+    const [skillLevels, setSkillLevelById] = useState(initialSkillLevels);
 
     const getSkillCategoryIcon = (category) => {
         switch (category) {
@@ -80,18 +93,30 @@ const Skills = () => {
         }
     };
 
+    const mouseEnterOnSkillItem = (categoryIndex, skillIndex, level) => {
+        initialSkillLevels[categoryIndex][skillIndex] = level;
+
+        setSkillLevelById(initialSkillLevels);
+    };
+
+    const mouseLeaveOnSkillItem = (categoryIndex, skillIndex) => {
+        initialSkillLevels[categoryIndex][skillIndex] = 0;
+
+        setSkillLevelById(initialSkillLevels);
+    };
+
     return (
         <div className='skills'>
             <div className='content'>
                 <div className='buttons'>
                     {
-                        SKILLS.map((skill, i) => {
+                        SKILLS.map((skill, categoryIndex) => {
                             return (
                                 <Button
-                                    key={i}
-                                    variant={index === i ? 'contained' : 'text'}
-                                    className={index === i ? classes.buttonActive : classes.button}
-                                    onClick={() => indexChanged(i)}
+                                    key={categoryIndex}
+                                    variant={index === categoryIndex ? 'contained' : 'text'}
+                                    className={index === categoryIndex ? classes.buttonActive : classes.button}
+                                    onClick={() => indexChanged(categoryIndex)}
                                 >
                                     <div>
                                         {getSkillCategoryIcon(skill.category)}
@@ -108,15 +133,23 @@ const Skills = () => {
                     </div>
                     <SwipeableViews index={index} onChangeIndex={indexChanged} style={Object.assign({}, styles.sw)}>
                         {
-                            SKILLS.map((skill, i) => {
+                            SKILLS.map((skill, categoryIndex) => {
                                 return (
-                                    <div key={i} style={Object.assign({}, styles.slide)}>
+                                    <div key={categoryIndex} style={Object.assign({}, styles.slide)}>
                                         <div className='skill-items'>
                                             {
-                                                skill.items.map((item, y) => {
+                                                skill.items.map((item, skillIndex) => {
                                                     return (
-                                                        <div className='skill-item'>
-                                                            <div className='skill-lvl' style={{width: `${item.level}%`}}></div>
+                                                        <div
+                                                            key={skillIndex}
+                                                            className='skill-item'
+                                                            onMouseEnter={() => mouseEnterOnSkillItem(categoryIndex, skillIndex, item.level)}
+                                                            onMouseLeave={() => mouseLeaveOnSkillItem(categoryIndex, skillIndex)}
+                                                        >
+                                                            <div
+                                                                className='skill-lvl'
+                                                                style={{ width: `${skillLevels[categoryIndex][skillIndex]}%` }}
+                                                            ></div>
                                                             {item.name}
                                                         </div>
                                                     )

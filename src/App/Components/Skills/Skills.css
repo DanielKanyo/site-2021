@@ -62,17 +62,20 @@
     font-size: 17px;
     color: white;
     background-color: rgba(244, 244, 244, 0.2);
+    overflow: hidden;
 }
 
 .skill-lvl {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -1px;
     height: 2px;
     background-color: rgba(255, 255, 255, .6);
-    display: none;
+    width: 0;
+    transition: .2s;
 }
 
 .skill-item:hover  .skill-lvl {
     display: block;
+    transition: .2s;
 }
