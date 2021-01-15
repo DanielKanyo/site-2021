@@ -115,7 +115,10 @@ const Skills = () => {
                                             {
                                                 skill.items.map((item, y) => {
                                                     return (
-                                                        <div key={y} className='skill-item'>{item}</div>
+                                                        <div className='skill-item'>
+                                                            <div className='skill-lvl' style={{width: `${item.level}%`}}></div>
+                                                            {item.name}
+                                                        </div>
                                                     )
                                                 })
                                             }

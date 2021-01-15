@@ -35,14 +35,115 @@ export const SKILL_CATEGORIES = {
 export const SKILLS = [
     {
         category: SKILL_CATEGORIES.BACKEND,
-        items: ['Java', 'Spring Boot', 'Node.js', 'Firebase', 'Php']
+        items: [
+            {
+                name: 'Java',
+                level: 90
+            },
+            {
+                name: 'Spring Boot',
+                level: 90
+            },
+            {
+                name: 'Node.js',
+                level: 40
+            },
+            {
+                name: 'Firebase',
+                level: 80
+            },
+            {
+                name: 'Php',
+                level: 20
+            }
+        ]
     },
     {
         category: SKILL_CATEGORIES.FRONTEND,
-        items: ['HTML5', 'CSS3', 'Java Script', 'Angular', 'React.js', 'Polymer', 'd3.js', 'Three.js', 'Redux', 'JQuery', 'React Native', 'Bootstrap']
+        items: [
+            {
+                name: 'HTML5',
+                level: 95
+            },
+            {
+                name: 'CSS3',
+                level: 95
+            },
+            {
+                name: 'Java Script',
+                level: 90
+            },
+            {
+                name: 'Angular',
+                level: 85
+            },
+            {
+                name: 'React.js',
+                level: 75
+            },
+            {
+                name: 'Polymer',
+                level: 85
+            },
+            {
+                name: 'd3.js',
+                level: 50
+            },
+            {
+                name: 'Three.js',
+                level: 10
+            },
+            {
+                name: 'Redux',
+                level: 60
+            },
+            {
+                name: 'JQuery',
+                level: 85
+            },
+            {
+                name: 'React Native',
+                level: 45
+            },
+            {
+                name: 'Bootstrap',
+                level: 90
+            }
+        ]
     },
     {
         category: SKILL_CATEGORIES.OTHER,
-        items: ['Linux', 'Git', 'MongoDB', 'Docker', 'Jenkins', 'UX', 'Non-Smoking', 'Driving Licence']
+        items: [
+            {
+                name: 'Linux'
+            },
+            {
+                name: 'Git',
+                level: 70
+            },
+            {
+                name: 'MongoDB',
+                level: 10
+            },
+            {
+                name: 'Docker',
+                level: 10
+            },
+            {
+                name: 'Jenkins',
+                level: 30
+            },
+            {
+                name: 'UX',
+                level: 90
+            },
+            {
+                name: 'Non-Smoking'
+            },
+            {
+                name: 'Driving Licence',
+                level: 100
+            }
+        ]
     }
 ];
