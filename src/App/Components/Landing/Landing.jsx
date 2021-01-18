@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 
 import Sphere from './Elements/Sphere';
 import PointLights from './Elements/PointLights';
+import Plane from './Elements/Plane';
 import Effects from './Effects/Effects';
 
 import './Landing.css';
@@ -26,6 +27,7 @@ const Landing = ({ index, setIndex }) => {
                 <ambientLight intensity={1.7} />
                 <PointLights mouse={mouse} />
                 <Sphere mouse={mouse} index={index} />
+                <Plane rotation={[0, 0, 20]} position={[-8, 1, .5]} />
                 <Effects />
             </Canvas>
 

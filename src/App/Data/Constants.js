@@ -115,11 +115,16 @@ export const SKILLS = [
         category: SKILL_CATEGORIES.OTHER,
         items: [
             {
-                name: 'Linux'
+                name: 'Linux',
+                level: 60
             },
             {
                 name: 'Git',
                 level: 70
+            },
+            {
+                name: 'Adobe Photoshop',
+                level: 90
             },
             {
                 name: 'MongoDB',
