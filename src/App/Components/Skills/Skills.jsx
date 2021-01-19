@@ -150,7 +150,7 @@ const Skills = () => {
                                                                 className='skill-lvl'
                                                                 style={{ width: `${skillLevels[categoryIndex][skillIndex]}%` }}
                                                             ></div>
-                                                            {item.name}
+                                                            <span>{item.name}</span>
                                                         </div>
                                                     )
                                                 })

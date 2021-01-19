@@ -27,7 +27,7 @@ const Landing = ({ index, setIndex }) => {
                 <ambientLight intensity={1.7} />
                 <PointLights mouse={mouse} />
                 <Sphere mouse={mouse} index={index} />
-                <Plane rotation={[0, 0, 20]} position={[-8, 1, .5]} />
+                <Plane rotation={[0, 0, 20]} position={[-8, 1, 0.5]} />
                 <Effects />
             </Canvas>
 
